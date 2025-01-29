@@ -1,0 +1,1341 @@
+:root {
+    --primary-color: #2B2C32;
+    /* Cor primária da página */
+    --white-color: #EAEAEA;
+    /* Cor branca para fundos e textos */
+    --gap: 3rem;
+    /* Espaçamento padrão */
+}
+
+* {
+    margin: 0%;
+    /* Remove margens padrão */
+    padding: 0%;
+    /* Remove preenchimentos padrão */
+    box-sizing: border-box;
+    /* Inclui bordas e preenchimentos na largura total */
+}
+
+html {
+    font-size: 62.5%;
+    /* Define o tamanho da fonte base */
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    /* Define a fonte principal como Jost */
+    line-height: 1.5;
+    /* Define a altura da linha */
+    color: var(--primary-color);
+    /* Define a cor do texto */
+}
+
+/* Estilos para títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Krona One', sans-serif;
+    /* Define a fonte dos títulos como Krona One */
+}
+
+h1 {
+    font-size: 6rem;
+    /* Tamanho do h1 */
+    text-transform: uppercase;
+    /* Transforma texto em maiúsculas */
+}
+
+h2 {
+    font-size: 6rem;
+    /* Tamanho do h2 */
+    margin-bottom: 5rem;
+    /* Margem inferior */
+    text-transform: uppercase;
+    /* Transforma texto em maiúsculas */
+    line-height: 1.2;
+    /* Altura da linha */
+}
+
+h3 {
+    font-size: 5rem;
+    /* Tamanho do h3 */
+}
+
+h4 {
+    font-size: 4.5rem;
+    /* Tamanho do h4 */
+}
+
+h5 {
+    font-size: 3.8rem;
+    /* Tamanho do h5 */
+}
+
+h6 {
+    font-size: 5.5rem;
+    /* Tamanho do h2 */
+    margin-bottom: 5rem;
+    /* Margem inferior */
+    text-transform: uppercase;
+    /* Transforma texto em maiúsculas */
+    line-height: 1.2;
+}
+
+a {
+    font-family: 'Jost', sans-serif;
+    text-decoration: none;
+    /* Remove sublinhado de links */
+    color: var(--white-color);
+}
+
+p {
+    font-family: 'Jost', sans-serif;
+    /* Define a fonte dos parágrafos como Jost */
+    margin-bottom: 3rem;
+    /* Margem inferior para parágrafos */
+    font-size: 1.5rem;
+}
+
+/* Cores */
+.main-bg {
+    background-color: var(--white-color);
+    background-size: cover;
+    /* Cobre toda a área do fundo */
+    background-position: center;
+    /* Centraliza a imagem de fundo */
+    color: var(--primary-color);
+    /* Cor do texto no fundo */
+}
+
+.white-bg {
+    background: var(--white-color);
+    /* Fundo branco */
+    color: var(--primary-color);
+    /* Cor do texto */
+}
+
+.black-bg {
+    background: var(--primary-color);
+    /* Fundo preto */
+    color: var(--white-color);
+    /* Cor do texto */
+}
+
+.main-content {
+    max-width: 120rem;
+    /* Largura máxima do conteúdo */
+    margin: 0 auto;
+    /* Centraliza o conteúdo */
+    padding: 8rem var(--gap);
+    /* Preenchimento superior/inferior e lateral */
+    box-sizing: border-box;
+    /* Garantir que o padding não ultrapasse a largura definida */
+}
+
+.video-container {
+    width: 100%;
+    /* Ocupa toda a largura disponível */
+    max-width: 1140px;
+    /* Define uma largura máxima */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    /* Necessário para o ajuste responsivo */
+    overflow: hidden;
+    /* Impede que o conteúdo exceda o contêiner */
+}
+
+.video-container video {
+    width: 100%;
+    /* Ajusta o vídeo para a largura do contêiner */
+    height: auto;
+    /* Mantém a proporção do vídeo */
+    display: block;
+    /* Remove o espaço em branco abaixo do vídeo */
+}
+
+.section {
+    min-height: 100vh;
+    /* Altura mínima da seção */
+}
+
+.menu-spacing {
+    height: 65px;
+    background-color: var(--white-color);
+    /* Altura do espaçamento do menu */
+}
+
+body .full-width {
+    width: 100%;
+    /* Largura total */
+    flex: 1 1 100%;
+    /* Flexbox para ocupar 100% da largura */
+}
+
+.menu {
+    position: fixed;
+    /* Menu fixo na tela */
+    top: 0%;
+    /* Posição superior */
+    left: 0%;
+    /* Posição à esquerda */
+    right: 100%;
+    /* Posição à direita */
+    width: 100%;
+    /* Largura total */
+    z-index: 1;
+    /* Camada superior */
+}
+
+.menu-content {
+    display: flex;
+    /* Flexbox para o conteúdo do menu */
+    justify-content: space-between;
+    /* Espaçamento entre os itens */
+    align-items: center;
+    /* Alinhamento vertical */
+    padding-top: 0%;
+    /* Preenchimento superior */
+    padding-bottom: 0%;
+    /* Preenchimento inferior */
+}
+
+.menu img {
+    max-width: 100px;
+    /* Faz a imagem ocupar a largura máxima possível */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+    /* Tamanho do título do menu */
+    color: var(--primary-color);
+    /* Cor do título */
+}
+
+.menu h1 a {
+    color: inherit;
+    /* Cor herdada do título */
+}
+
+.menu ul {
+    list-style: none;
+    /* Remove estilo de lista */
+    display: flex;
+    /* Flexbox para itens do menu */
+}
+
+.menu ul li a {
+    display: block;
+    /* Item de lista como bloco */
+    padding: 2rem;
+    /* Preenchimento interno */
+    font-size: 1.8rem;
+    /* Tamanho da fonte dos links */
+    color: var(--primary-color);
+    /* Cor dos links */
+    position: relative;
+    /* Para posicionar pseudo-elementos */
+}
+
+.menu ul li a::after {
+    content: '';
+    /* Pseudo-elemento para efeito visual */
+    position: absolute;
+    /* Posicionamento absoluto */
+    bottom: 1rem;
+    /* Posição inferior */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    width: 0;
+    /* Largura inicial */
+    height: 0.2rem;
+    /* Altura do efeito */
+    background: var(--primary-color);
+    /* Cor do efeito */
+    transition: all 300ms ease-in-out;
+    /* Transição suave */
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    /* Largura ao passar o mouse */
+    left: 25%;
+    /* Centraliza o efeito */
+}
+
+/* Estilos específicos para dispositivos móveis menu */
+@media (max-width: 768px) {
+    .menu {
+        position: fixed;
+        /* Menu fixo na tela */
+        top: 0;
+        /* Posição superior */
+        left: 0;
+        /* Posição à esquerda */
+        right: 0;
+        /* Posição à direita */
+        width: 100%;
+        /* Largura total */
+        z-index: 1;
+        /* Camada superior */
+        padding: 0 10px;
+        /* Padding para evitar que os itens fiquem na borda */
+        box-sizing: border-box;
+        /* Inclui o padding no cálculo da largura */
+    }
+
+    .menu-content {
+        display: flex;
+        /* Flexbox para o conteúdo do menu */
+        justify-content: space-between;
+        /* Espaçamento entre os itens */
+        align-items: center;
+        /* Alinhamento vertical */
+        width: 100%;
+        /* Garante que a largura ocupe 100% da tela */
+    }
+
+    .menu img {
+        max-width: 80px;
+        /* Ajusta o tamanho da imagem do logo para caber melhor no mobile */
+        height: auto;
+        /* Mantém a proporção da imagem */
+    }
+
+    .menu h1 {
+        font-size: 1.8rem;
+        /* Ajusta o tamanho do título no mobile */
+        color: var(--primary-color);
+        /* Cor do título */
+    }
+
+    .menu h1 a {
+        color: inherit;
+        /* Cor herdada do título */
+    }
+
+    .menu ul {
+        list-style: none;
+        /* Remove estilo de lista */
+        display: flex;
+        /* Flexbox para itens do menu */
+        justify-content: center;
+        /* Centraliza os itens horizontalmente */
+        padding: 0;
+        /* Remove o padding dos itens da lista */
+        margin: 0;
+        /* Remove a margem */
+        width: 100%;
+        /* Garante que ocupe toda a largura da tela */
+        flex-direction: row;
+        /* Garante que os itens fiquem em uma linha */
+    }
+
+    .menu ul li {
+        margin: 0 10px;
+        /* Adiciona uma margem entre os itens */
+    }
+
+    .menu ul li a {
+        display: block;
+        /* Item de lista como bloco */
+        padding: 1rem;
+        /* Reduz o padding interno para ajustar no mobile */
+        font-size: 1.6rem;
+        /* Ajusta o tamanho da fonte para mobile */
+        color: var(--primary-color);
+        /* Cor dos links */
+        position: relative;
+        /* Para posicionar pseudo-elementos */
+    }
+
+    .menu ul li a::after {
+        content: '';
+        /* Pseudo-elemento para efeito visual */
+        position: absolute;
+        /* Posicionamento absoluto */
+        bottom: 0.5rem;
+        /* Posição inferior */
+        left: 50%;
+        /* Centraliza horizontalmente */
+        width: 0;
+        /* Largura inicial */
+        height: 0.2rem;
+        /* Altura do efeito */
+        background: var(--primary-color);
+        /* Cor do efeito */
+        transition: all 300ms ease-in-out;
+        /* Transição suave */
+    }
+
+    .menu ul li a:hover::after {
+        width: 50%;
+        /* Largura ao passar o mouse */
+        left: 25%;
+        /* Centraliza o efeito */
+    }
+}
+
+
+.intro-content {
+    position: relative;
+    /* Posição relativa */
+    display: grid;
+    /* Usando grid para layout */
+    grid-template-columns: 1fr 1.5fr;
+    /* Duas colunas com proporções diferentes */
+    gap: var(--gap);
+    /* Espaçamento entre colunas */
+    min-height: 100vh;
+    /* Altura mínima */
+}
+
+.intro-text-content,
+.intro-img {
+    display: flex;
+    /* Flexbox para conteúdo de introdução */
+    flex-flow: column wrap;
+    /* Alinha verticalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+}
+
+.intro-img {
+    position: relative;
+    width: 400px;
+    /* Largura fixa da imagem */
+    height: 600px;
+    /* Altura fixa da imagem */
+    left: 100px;
+    /* Ajuste de posição à esquerda */
+    overflow: hidden;
+}
+
+.intro-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    /* Largura fixa da imagem */
+    height: 600px;
+    /* Altura fixa da imagem */
+    object-fit: cover;
+    /* Garante que a imagem preencha a área sem distorcer */
+    opacity: 0;
+    animation: imageFade 9s infinite;
+    /* Mantém a animação original */
+}
+
+.intro-img img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.intro-img img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.intro-img img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes imageFade {
+
+    0%,
+    25% {
+        opacity: 1;
+    }
+
+    30%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Estilos específicos para dispositivos móveis capa do site */
+@media (max-width: 768px) {
+    .intro-content {
+        grid-template-columns: 1fr;
+        /* Coloca as colunas em uma linha única */
+        grid-template-areas:
+            "text"
+            "images";
+        /* A estrutura muda para uma coluna única */
+        padding-top: 0;
+        /* Remover padding-top para evitar a linha branca */
+        margin-top: 0;
+        /* Remover a margem superior */
+    }
+
+    .intro-text-content {
+        text-align: center;
+        /* Alinha o texto ao centro */
+        padding: 10px;
+        margin-top: 20px;
+        /* Ajusta o espaçamento entre o texto e a imagem */
+    }
+
+    .intro-text-content h2 {
+        font-size: 1.8em;
+        /* Ajusta o tamanho da fonte para mobile */
+        margin-bottom: 10px;
+        /* Ajusta o espaçamento abaixo do título */
+    }
+
+    .intro-text-content p {
+        font-size: 1em;
+        /* Ajusta o tamanho da fonte */
+        margin-bottom: 10px;
+        /* Espaçamento entre os parágrafos */
+    }
+
+    /* Ajustes no container da imagem */
+    .intro-img {
+        position: relative;
+        /* Necessário para garantir o controle da posição */
+        width: 100%;
+        /* O container ocupa 100% da largura disponível */
+        height: 400px;
+        /* Ajusta a altura do container da imagem */
+        left: 0px;
+        margin-top: 0;
+        /* Sem margem no topo */
+        margin-bottom: 0;
+        /* Sem margem na parte inferior */
+        overflow: hidden;
+        /* Garante que a imagem não ultrapasse os limites do container */
+        display: flex;
+        /* Usando flexbox para centralizar a imagem */
+        justify-content: center;
+        /* Centraliza a imagem horizontalmente */
+        align-items: center;
+        /* Centraliza a imagem verticalmente */
+    }
+
+    .intro-img img {
+        width: 120%;
+        /* A imagem será maior que o container */
+        height: auto;
+        /* A altura será ajustada proporcionalmente */
+        max-height: 400px;
+        /* Limita a altura máxima da imagem */
+        object-fit: cover;
+        /* A imagem vai cobrir a área do container sem distorcer */
+        object-position: center;
+        /* A imagem será centralizada dentro do container */
+    }
+}
+
+    /* Estilos específicos para dispositivos móveis video */
+    @media (max-width: 768px) {
+        .top3-content {
+            padding: 2rem 1rem;
+            /* Reduz o espaçamento superior e inferior no mobile */
+            min-height: auto;
+            /* Ajusta a altura mínima para o conteúdo */
+            margin-top: 0;
+            /* Remove a margem superior */
+        }
+
+        .video-container {
+            width: 100%;
+            /* Garante que o vídeo ocupe toda a largura disponível */
+            max-width: 100%;
+            /* Não limita a largura no mobile */
+            margin: 0;
+            /* Remove margens laterais */
+        }
+
+        .video-container video {
+            width: 100%;
+            /* Garante que o vídeo ocupe 100% do contêiner */
+            height: auto;
+            /* Mantém a proporção do vídeo */
+        }
+
+        h2 {
+            font-size: 5rem;
+            padding-top: 3rem;
+            /* Ajuste no tamanho da fonte para telas menores */
+        }
+
+    }
+    /* Garantir que o body e o conteúdo tenham o comportamento esperado */
+    body .full-width {
+        flex: none;
+        /* Remover o flexbox se estiver causando problemas no mobile */
+    }
+
+    /* Garantir que o main-content se ajuste corretamente */
+    .main-content {
+        width: 100%;
+        /* Garante que o conteúdo ocupe 100% da largura disponível */
+        padding-left: var(--gap);
+        /* Preserva o preenchimento lateral */
+        padding-right: var(--gap);
+        /* Preserva o preenchimento lateral */
+        box-sizing: border-box;
+        /* Garante que o padding não ultrapasse o container */
+        overflow-x: hidden;
+        /* Impede o overflow horizontal */
+    }
+
+    /* Corrigir o overflow no container principal (main) */
+    main {
+        width: 100%;
+        /* Garante que o conteúdo ocupe toda a largura disponível */
+        overflow-x: hidden;
+        /* Impede o conteúdo de transbordar horizontalmente */
+    }
+
+
+/* Nova classe para o título e o grid */
+.investimento-imoveis-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.investimento-imoveis-heading {
+    text-align: center;
+    width: 100%;
+}
+
+.investimento-imoveis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 colunas */
+    grid-template-rows: auto auto;
+    /* 2 linhas */
+    gap: 20px;
+    width: 100%;
+}
+
+.topico {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Layout para alinhar o título no centro e tópicos em 2 linhas */
+.investimento-imoveis-grid .topico-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.investimento-imoveis-grid .topico-2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.investimento-imoveis-grid .topico-3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.investimento-imoveis-grid .topico-4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* Responsividade 4 vantagens */
+@media (max-width: 768px) {
+    .investimento-imoveis-heading {
+        font-size: 1.5rem; /* Ajuste no tamanho da fonte do título */
+        text-align: center; /* Centraliza o título */
+    }
+
+    .topico {
+        padding: 1rem; /* Espaçamento interno para cada item */
+        margin-bottom: 1rem; /* Espaçamento entre os artigos */
+    }
+
+    .topico h5 {
+        font-size: 1.25rem; /* Ajuste no tamanho da fonte dos subtítulos */
+    }
+
+    .topico p {
+        font-size: 1rem; /* Ajuste no tamanho da fonte do texto */
+        line-height: 1.5; /* Melhor legibilidade no texto */
+    }
+}
+
+.grid-one h2 {
+    font-size: 6rem;
+    text-align: center;
+}
+
+.grid-one h3 {
+    font-size: 2rem;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .grid-one h2 {
+        font-size: 5rem;
+        /* Reduz o tamanho do título em telas menores */
+        margin-bottom: 1rem;
+        /* Adiciona espaçamento inferior */
+    }
+
+    .grid-one h3 {
+        font-size: 1.5rem;
+        /* Reduz o tamanho do texto */
+        line-height: 1.6;
+        /* Aumenta o espaçamento entre linhas para legibilidade */
+        text-align: left;
+        /* Alinha o texto à esquerda para consistência */
+        padding: 0 1rem;
+        /* Adiciona espaçamento interno para evitar que o texto encoste nas bordas */
+        word-break: break-word;
+        /* Garante que palavras longas não quebrem o layout */
+    }
+
+    .text-container-horizontal {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        /* Espaçamento entre os elementos internos */
+    }
+
+    .text-container-horizontal img {
+        max-width: 50px;
+        /* Ajusta o tamanho do ícone em telas menores */
+        height: auto;
+        /* Mantém a proporção do ícone */
+    }
+}
+
+.grid-main-heading {
+    margin-bottom: 1rem;
+    /* Margem inferior */
+}
+
+.grid-description {
+    padding-bottom: 5rem;
+    /* Preenchimento inferior */
+}
+
+.grid {
+    display: grid;
+    /* Usando grid para layout */
+    grid-template-columns: repeat(3, 1fr);
+    /* Três colunas iguais */
+    gap: var(--gap);
+    /* Espaçamento entre colunas */
+    counter-reset: grid-counter;
+    /* Reinicia contador */
+}
+
+.grid h3 {
+    font-size: 3rem;
+    /* Tamanho do título na grade */
+    position: relative;
+    /* Posição relativa */
+    padding-left: 5rem;
+    /* Preenchimento à esquerda */
+    padding-bottom: 2rem;
+    /* Preenchimento inferior */
+}
+
+.grid h3::before {
+    counter-increment: grid-counter;
+    /* Incrementa contador */
+    content: counter(grid-counter);
+    /* Mostra contador */
+    position: absolute;
+    /* Posicionamento absoluto */
+    font-size: 8rem;
+    /* Tamanho do contador */
+    font-style: italic;
+    /* Estilo itálico */
+    top: -4rem;
+    /* Posição superior */
+    left: -2rem;
+    /* Posição à esquerda */
+    transform: rotate(5deg);
+    /* Rotação do contador */
+}
+
+.text-container-horizontal {
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente */
+    gap: 10px;
+    /* Espaçamento entre a imagem e o texto */
+    margin-bottom: 20px;
+    /* Espaçamento inferior entre os itens */
+}
+
+.text-container-horizontal img {
+    width: auto;
+    /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.text-container-horizontal h3 {
+    margin: 0;
+    /* Remove margem padrão para centralizar melhor */
+    font-size: 1.6em;
+}
+
+.text-container-horizontal p {
+    margin: 0;
+}
+
+.image-container {
+    position: relative;
+}
+
+.main-image,
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 208px;
+    /* Tamanho desejado */
+    height: 315px;
+    /* Tamanho desejado */
+    opacity: 0;
+    /* Inicialmente ocultas */
+    transition: opacity 0.5s ease;
+    /* Transição suave */
+}
+
+.main-image {
+    opacity: 1;
+    /* A imagem principal é visível por padrão */
+}
+
+
+/* Código CSS para a seção sobre */
+#sobre .main-content {
+    display: flex;
+    /* Utiliza flexbox para alinhar os itens */
+    align-items: flex-start;
+    /* Alinha o conteúdo no topo */
+}
+
+#sobre .text-container {
+    margin-right: 20px;
+    /* Espaço entre o texto e a imagem */
+}
+
+#sobre .grid-main-heading {
+    margin: 0;
+    /* Remove margens do h2 */
+}
+
+#sobre .grid-description {
+    margin: 0;
+    /* Remove margens do parágrafo */
+    margin-top: 10px;
+    /* Espaçamento entre o título e a descrição */
+}
+
+#sobre .img-sobre {
+    margin-top: 0;
+    /* Remove o espaçamento acima da imagem */
+}
+
+.img-sobre img {
+    max-width: 500px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+}
+
+.my-icon {
+    font-size: 40px;
+    margin-right: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.my-icontwo {
+    font-size: 25px;
+    margin-top: 1rem;
+    text-align: center;
+    margin-left: 1.5rem;
+    margin-right: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.my-icon:hover {
+    transform: scale(1.1);
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/* Ajustes para telas menores sobre mim*/
+@media (max-width: 768px) {
+    #sobre .main-content {
+        flex-direction: column;
+        /* Alinha os itens em coluna */
+        align-items: center;
+        /* Centraliza os itens */
+    }
+
+    #sobre .text-container {
+        margin-right: 0;
+        /* Remove a margem direita */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    #sobre .img-sobre {
+        margin-top: 20px;
+        /* Adiciona um espaçamento acima da imagem */
+    }
+
+    .img-sobre img {
+        max-width: 100%;
+        /* Ajusta a largura da imagem para ocupar todo o espaço disponível */
+        height: auto;
+        /* Mantém a proporção */
+    }
+
+    .my-icon {
+        font-size: 30px;
+        /* Reduz o tamanho dos ícones */
+        margin: 10px;
+        /* Adiciona espaçamento ao redor dos ícones */
+    }
+}
+/* Estilo do catálogo */
+.product-catalog {
+    display: flex;
+    justify-content: center;
+    /* Centraliza o catálogo */
+    gap: 1.5rem;
+    /* Espaçamento entre produtos */
+    padding: 0 2rem;
+    /* Espaçamento para manter alinhado */
+    max-width: 1200px;
+    /* Limite de largura para caber na página */
+    margin: 0 auto;
+    /* Centraliza o catálogo na página */
+}
+
+.product-item {
+    flex: 1 1 250px;
+    /* Define largura flexível com limite mínimo */
+    max-width: 250px;
+    height: 450px;
+    /* Ajusta altura para não ultrapassar a página */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: 70%;
+    /* Proporção entre imagem e texto */
+    object-fit: cover;
+}
+
+.product-item h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.product-item p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 0 1rem;
+}
+
+/* Efeito de hover */
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.additional-images img {
+    display: none;
+    /* Garante que as imagens adicionais estejam ocultas inicialmente */
+    width: 100%;
+    /* Para garantir que a imagem se ajuste ao tamanho do contêiner */
+    height: auto;
+    /* Mantém a proporção */
+    object-fit: cover;
+    /* Mantém a proporção da imagem */
+}
+
+.product-item img {
+    transition: opacity 0.5s ease;
+}
+
+/* Ajustes específicos para dispositivos móveis catalogo */
+@media (max-width: 768px) {
+    .product-catalog {
+        flex-direction: column;
+        /* Alinha os itens verticalmente */
+        align-items: center;
+        gap: 1.5rem;
+        /* Espaçamento entre itens em telas menores */
+    }
+
+    .product-item {
+        flex: 1 1 100%;
+        /* Cada item ocupa toda a largura disponível */
+        max-width: 100%;
+        /* Limita a largura máxima em 90% da tela */
+        padding: 1rem;
+        /* Espaçamento interno para manter o design clean */
+    }
+    .product-item img {
+        width: 100%;
+        /* Garante que a imagem ocupe toda a largura do contêiner */
+        height: auto;
+        /* Mantém a proporção da imagem */
+        object-fit: cover;
+        margin-bottom: 1rem;
+        /* Espaçamento abaixo da imagem */
+    }
+
+    #projetos h2 {
+        font-size: 4.5rem;
+        /* Ajusta o tamanho do título */
+    }
+
+    .product-item h3 {
+        font-size: 1.4rem;
+        /* Ajusta o tamanho do texto do título */
+    }
+
+    .product-item p {
+        font-size: 1.2rem;
+        /* Reduz o tamanho do texto descritivo */
+        padding: 0 1rem;
+        /* Adiciona padding lateral para evitar texto grudado nas bordas */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+}
+
+/* Estilos para a seção de contato */
+#contact {
+    padding: 8rem var(--gap);
+    /* Preenchimento superior/inferior e lateral */
+}
+
+/* Estilo do título da seção de contato */
+#contact h2 {
+    font-size: 5rem;
+    /* Tamanho do título */
+    color: var(--primary-color);
+    /* Cor do título */
+    margin-bottom: 1rem;
+    /* Margem inferior */
+    text-align: center;
+    /* Centraliza o título */
+}
+
+/* Estilo da descrição */
+#contact p {
+    font-size: 1.8rem;
+    /* Tamanho do texto */
+    text-align: center;
+    /* Centraliza o texto */
+    margin-bottom: 3rem;
+    /* Margem inferior */
+}
+
+/* Estilos para o formulário */
+.contact-form {
+    background: var(--white-color);
+    /* Fundo branco para o formulário */
+    border-radius: 1rem;
+    /* Bordas arredondadas */
+    padding: 2rem;
+    /* Preenchimento interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+/* Estilo do fieldset */
+.form-grid {
+    border: none;
+    /* Remove a borda padrão */
+}
+
+/* Estilo do legend */
+.form-grid legend {
+    font-size: 3rem;
+    /* Tamanho do texto do legend */
+    font-weight: bold;
+    /* Negrito */
+    color: var(--primary-color);
+    /* Cor do texto */
+    margin-bottom: 2rem;
+    /* Margem inferior */
+}
+
+/* Estilos para os grupos de formulário */
+.form-group {
+    margin-bottom: 2rem;
+    /* Margem inferior entre os campos */
+}
+
+/* Estilo dos rótulos */
+.form-group label {
+    font-size: 1.6rem;
+    /* Tamanho do texto do rótulo */
+    display: block;
+    /* Faz o rótulo ocupar toda a largura */
+    margin-bottom: 0.5rem;
+    /* Margem inferior */
+}
+
+/* Estilos para os campos de entrada e textarea */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    /* Largura total */
+    padding: 1rem;
+    /* Preenchimento interno */
+    border: none;
+    /* Remove a borda */
+    border-radius: 0.5rem;
+    /* Bordas arredondadas */
+    font-size: 1.4rem;
+    /* Tamanho da fonte */
+    color: var(--primary-color);
+    /* Cor do texto */
+}
+
+/* Estilo para o grupo que contém o botão */
+.form-group.button-group {
+    display: flex;
+    /* Torna a div flexível */
+    justify-content: flex-end;
+    /* Alinha o conteúdo à direita */
+}
+
+/* Estilo para o botão */
+.form-group button {
+    width: auto;
+    /* Largura automática */
+    padding: 14px 76px;
+    /* Preenchimento interno menor */
+    background-color: var(--primary-color);
+    /* Cor de fundo do botão */
+    color: var(--white-color);
+    /* Cor do texto do botão */
+    font-size: 1.6rem;
+    /* Tamanho da fonte do botão */
+    border: 1px solid var(--primary-color);
+    /* Borda para o botão */
+    border-radius: 0.5rem;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Muda o cursor para indicar clique */
+    transition: background-color 0.3s;
+    /* Transição suave para a cor do fundo */
+    font-family: 'Krona One', sans-serif;
+}
+
+/* Estilo do grupo que contém o botão */
+.button-group {
+    margin-top: 1rem;
+    /* Margem superior para separar do campo anterior */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.form-group button:hover {
+    background-color: darken(var(--primary-color), 10%);
+    /* Escurece a cor ao passar o mouse */
+}
+
+/* Estilos de responsividade formulário de contato */
+@media screen and (max-width: 600px) {
+    #contact h2 {
+        font-size: 4rem;
+        /* Tamanho menor para títulos */
+    }
+
+    #contact p {
+        font-size: 1.6rem;
+        /* Tamanho menor para texto */
+    }
+
+    .form-group label {
+        font-size: 1.4rem;
+        /* Tamanho menor para rótulos */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 1.2rem;
+        /* Tamanho menor para campos de entrada */
+    }
+
+    .form-group button {
+        font-size: 1.4rem;
+        /* Tamanho menor para botão */
+    }
+}
+
+
+/* Rodapé */
+.footer {
+    padding: 3rem 0;
+    /* Preenchimento superior/inferior */
+    background-color: var(--primary-color);
+    /* Fundo do rodapé */
+    color: var(--white-color);
+    /* Cor do texto no rodapé */
+}
+
+.footer h3 {
+    font-size: 2rem;
+    /* Tamanho do título no rodapé */
+}
+
+.footer .footer-content {
+    display: flex;
+    /* Flexbox para conteúdo do rodapé */
+    justify-content: center;
+    /* Centraliza todo o conteúdo do footer */
+    align-items: flex-start;
+    /* Alinha os itens ao topo */
+    max-width: 120rem;
+    /* Limita a largura máxima do rodapé */
+    margin: 0 auto;
+    /* Centraliza o rodapé na tela */
+    padding: 0 2rem;
+    /* Preenchimento lateral */
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 2;
+    /* Faz cada seção ocupar um espaço igual */
+    text-align: left;
+    /* Alinha texto à esquerda */
+}
+
+.footer-center {
+    text-align: left;
+    /* Alinha texto à esquerda na seção de contato */
+}
+
+.footer-right {
+    flex: 1;
+}
+
+.footer-address {
+    display: flex;
+    /* Usando flexbox para empilhar itens */
+    flex-direction: column;
+    /* Direção vertical para o endereço */
+    align-items: flex-start;
+    /* Alinha itens à esquerda */
+}
+
+.footer-address p {
+    margin: 0;
+    /* Remove margens para evitar espaços indesejados */
+}
+
+.footer-author {
+    margin-top: 0;
+    /* Margem superior para separar do endereço */
+    text-align: right;
+    /* Alinha texto à esquerda */
+    margin-right: 10rem;
+}
+
+.footer-logo {
+    max-width: 120px;
+    /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    height: 100px;
+    /* Mantém a proporção da imagem */
+    display: block;
+    /* Faz a imagem ser um bloco para evitar espaços indesejados */
+    margin: 0;
+    /* Remove margens para centralização */
+}
+
+.footer p {
+    margin: 0;
+    /* Remove margens para evitar espaços indesejados */
+    font-size: 1.5rem;
+    /* Tamanho padrão para parágrafos */
+}
+
+.crown {
+    color: goldenrod;
+}
+
+.close-menu {
+    display: none;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--primary-color);
+}
+
+/* Estilos de responsividade rodapé */
+@media screen and (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        /* Organiza os itens verticalmente */
+        align-items: center;
+        /* Centraliza o conteúdo */
+        justify-content: center;
+        /* Garante que o conteúdo esteja centralizado verticalmente */
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        width: 100%;
+        /* Cada seção ocupa toda a largura disponível */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .footer-logo {
+        max-width: 80px;
+        /* Reduz o tamanho do logo */
+        height: auto;
+        margin: 0 auto;
+        /* Garante que a logo seja centralizada */
+    }
+
+    .footer p {
+        font-size: 1.4rem;
+        /* Reduz o tamanho do texto */
+    }
+}
