@@ -3,10 +3,10 @@ const nodemailer = require('nodemailer');
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-      const { 'first-name': nome, 'last-name': sobrenome, email, message } = req.body;
+      const { 'first-name': nome, 'last-name': sobrenome, email, message, phone } = req.body; // Inclua o campo phone
 
-      // Validação básica (adapte conforme suas necessidades)
-      if (!nome || !email || !message) {
+      // Validação (inclua validação para o telefone)
+      if (!nome || !email || !message || !phone) {
         return res.status(400).json({ error: 'Preencha todos os campos.' });
       }
 
@@ -14,17 +14,17 @@ export default async function handler(req, res) {
       const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: process.env.EMAIL_USER, // Acessa a variável EMAIL_USER
-          pass: process.env.EMAIL_PASSWORD // Acessa a variável EMAIL_PASSWORD
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASSWORD
         }
       });
 
-      // Opções do email
+      // Opções do email (inclua o telefone na mensagem)
       const mailOptions = {
         from: email,
-        to: process.env.EMAIL_USER, // Seu email para receber os contatos
+        to: process.env.EMAIL_USER,
         subject: `Contato do site: ${nome} ${sobrenome}`,
-        text: `Nome: ${nome} ${sobrenome}\nEmail: ${email}\nMensagem:\n${message}`
+        text: `Nome: ${nome} ${sobrenome}\nEmail: ${email}\nTelefone: ${phone}\nMensagem:\n${message}` // Adicione o telefone aqui
       };
 
       // Envio do email
@@ -37,6 +37,6 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'Erro interno do servidor.' });
     }
   } else {
-    return res.status(405).end(); // Método não permitido (apenas POST)
+    return res.status(405).end();
   }
 }
