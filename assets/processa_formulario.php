@@ -1,4 +1,13 @@
 <?php
+// Lê os dados do formulário (JSON)
+$requestBody = file_get_contents('php://input');
+$data = json_decode($requestBody, true);
+
+$nome = htmlspecialchars(trim($data['first-name']));
+$sobrenome = htmlspecialchars(trim($data['last-name']));
+$email = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
+$mensagem = htmlspecialchars(trim($data['message']));
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = htmlspecialchars(trim($_POST['first-name']));
     $sobrenome = htmlspecialchars(trim($_POST['last-name']));
