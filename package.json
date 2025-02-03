@@ -1,5 +1,5 @@
 {
     "dependencies": {
-      "child_process": "*"
+      "node-fetch": "2.6.9"
     }
   }
