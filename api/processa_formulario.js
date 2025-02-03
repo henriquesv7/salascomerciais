@@ -22,7 +22,7 @@ export default async function handler(req, res) {
       // Opções do email
       const mailOptions = {
         from: email,
-        to: 'saulovalin1@gmail.com', // Seu email para receber os contatos
+        to: process.env.EMAIL_USER, // Seu email para receber os contatos
         subject: `Contato do site: ${nome} ${sobrenome}`,
         text: `Nome: ${nome} ${sobrenome}\nEmail: ${email}\nMensagem:\n${message}`
       };
